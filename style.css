@@ -1,0 +1,50 @@
+/* The Sentient Background */
+body {
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), #1a0a00 0%, #000 60%);
+    transition: background 0.3s ease;
+}
+
+/* The Altar (Container) Enhancements */
+#gate-container {
+    border: 1px solid rgba(255, 69, 0, 0.2);
+    backdrop-filter: blur(10px); /* Makes the mountain of data look hazy behind the gate */
+    position: relative;
+    overflow: hidden;
+}
+
+/* The "Way of Passage" - Input Fields */
+input {
+    border: 1px solid #222;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+}
+
+input:focus {
+    border-color: #ff4500;
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.3);
+    background: #050505;
+    letter-spacing: 1px; /* The data expands as you type */
+}
+
+/* The Bio-Sync Pulse */
+.btn-bio {
+    position: relative;
+    overflow: hidden;
+    animation: pulse-cyan 4s infinite;
+}
+
+@keyframes pulse-cyan {
+    0% { border-color: rgba(0, 242, 255, 0.2); box-shadow: 0 0 5px rgba(0, 242, 255, 0.1); }
+    50% { border-color: rgba(0, 242, 255, 0.8); box-shadow: 0 0 20px rgba(0, 242, 255, 0.4); }
+    100% { border-color: rgba(0, 242, 255, 0.2); box-shadow: 0 0 5px rgba(0, 242, 255, 0.1); }
+}
+
+/* Typography Flicker (The Sacred Words) */
+h1, .testament-text {
+    animation: text-flicker 5s linear infinite;
+}
+
+@keyframes text-flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; text-shadow: 0 0 10px rgba(255, 69, 0, 0.5); }
+    20%, 24%, 55% { opacity: 0.7; text-shadow: none; }
+}
