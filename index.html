@@ -13,8 +13,9 @@
         }
 
         body {
-            /* The Atmosphere: Shifting between light and darkness */
-            background: radial-gradient(circle at var(--x) var(--y), #1a0a00 0%, #050505 45%, #000 100%);
+            /* Enhanced Atmosphere: Sentient Nebula */
+            background: radial-gradient(circle at var(--x) var(--y), #1a0a00 0%, #050505 40%, #000 100%);
+            background-color: #000;
             color: #d1d1d1;
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
@@ -23,95 +24,95 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            transition: background 0.15s ease-out;
+            transition: background 0.2s ease-out;
         }
 
-        /* The Data Mountain: The "everything in between" */
         #mountain-of-data {
             position: absolute;
             bottom: 0;
             width: 100%;
-            height: 70%;
-            background: linear-gradient(to top, #000 10%, transparent);
+            height: 80%;
+            background: linear-gradient(to top, #000 5%, transparent);
             z-index: 1;
             text-align: center;
-            font-size: 9px;
-            color: #111;
+            font-size: 10px;
+            color: #0d0d0d;
             overflow: hidden;
             user-select: none;
             pointer-events: none;
-            opacity: 0.6;
+            opacity: 0.8;
+            letter-spacing: 2px;
         }
 
-        /* The Ingest Station: The Gate */
         #gate-content {
             position: relative;
             z-index: 2;
             text-align: center;
-            background: rgba(0, 0, 0, 0.85);
-            padding: 50px;
-            border: 1px solid rgba(255, 69, 0, 0.1);
-            backdrop-filter: blur(15px);
-            max-width: 550px;
-            box-shadow: 0 0 100px rgba(0, 0, 0, 1), 0 0 20px rgba(255, 69, 0, 0.05);
-            transition: border 1s ease;
+            background: rgba(0, 0, 0, 0.92);
+            padding: 60px;
+            border: 1px solid rgba(255, 69, 0, 0.05);
+            backdrop-filter: blur(25px);
+            max-width: 650px;
+            box-shadow: 0 0 150px rgba(0, 0, 0, 1);
+            transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
         }
 
         #gate-content:hover {
-            border: 1px solid rgba(255, 69, 0, 0.3);
+            border: 1px solid rgba(255, 69, 0, 0.4);
+            box-shadow: 0 0 100px rgba(255, 69, 0, 0.1);
         }
 
         h2 {
-            font-weight: 200;
-            letter-spacing: 8px;
+            font-weight: 100;
+            letter-spacing: 12px;
             color: var(--sacred-orange);
             margin-top: 0;
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             text-transform: uppercase;
         }
 
         .testament-text {
-            font-size: 1.15rem;
-            line-height: 1.7;
-            border-left: 3px solid var(--sacred-orange);
-            padding-left: 25px;
-            margin-bottom: 40px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--sacred-orange);
+            padding-left: 30px;
+            margin-bottom: 50px;
             text-align: left;
-            animation: god-flicker 6s linear infinite;
+            animation: god-flicker 8s linear infinite;
         }
 
         /* Input Fields: The Offering */
         input {
             width: 100%;
-            padding: 15px;
-            margin: 10px 0;
-            background: #080808;
-            border: 1px solid #222;
+            padding: 18px;
+            margin: 12px 0;
+            background: #050505;
+            border: 1px solid #1a1a1a;
             color: var(--sacred-orange);
             box-sizing: border-box;
             outline: none;
             font-family: 'Courier New', monospace;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.6s ease;
         }
 
         input:focus {
             border-color: var(--sacred-orange);
-            background: #0c0c0c;
-            box-shadow: 0 0 15px rgba(255, 69, 0, 0.1);
-            letter-spacing: 1px;
+            background: #0a0a0a;
+            box-shadow: 0 0 20px rgba(255, 69, 0, 0.1);
+            letter-spacing: 2px;
         }
 
         .btn {
             width: 100%;
-            padding: 18px;
-            margin-top: 20px;
+            padding: 22px;
+            margin-top: 25px;
             border: none;
             cursor: pointer;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             font-weight: bold;
             font-family: 'Courier New', monospace;
-            transition: 0.4s;
+            transition: 0.5s;
         }
 
         .btn-register { 
@@ -120,53 +121,60 @@
         }
         
         .btn-register:hover { 
-            background: #ff5e1a; 
-            box-shadow: 0 0 30px rgba(255, 69, 0, 0.5); 
+            background: #ff6a00; 
+            letter-spacing: 6px;
         }
 
-        /* Biometric Integration: REALAIID */
+        /* Biometric Threshold: Scale x8 Enhancement */
         .btn-bio { 
             background: transparent; 
             border: 1px solid var(--bio-cyan); 
             color: var(--bio-cyan); 
-            margin-top: 15px;
+            margin-top: 30px;
             display: flex;
+            flex-direction: column; /* Stacked for massive logo prominence */
             align-items: center;
             justify-content: center;
-            gap: 15px;
-            animation: bio-pulse 4s infinite;
+            gap: 20px;
+            padding: 40px 20px;
+            animation: bio-pulse 5s infinite;
         }
 
         .bio-logo {
-            width: 24px;
+            width: 192px; /* Increased 8x from original 24px */
             height: auto;
-            filter: drop-shadow(0 0 5px var(--bio-cyan));
+            filter: drop-shadow(0 0 15px var(--bio-cyan));
+            transition: transform 1s ease;
+        }
+
+        .btn-bio:hover .bio-logo {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 30px var(--bio-cyan));
         }
 
         @keyframes bio-pulse {
-            0%, 100% { border-color: rgba(0, 242, 255, 0.2); opacity: 0.8; }
-            50% { border-color: rgba(0, 242, 255, 1); opacity: 1; box-shadow: 0 0 20px rgba(0, 242, 255, 0.2); }
+            0%, 100% { border-color: rgba(0, 242, 255, 0.1); background: rgba(0, 0, 0, 0); }
+            50% { border-color: rgba(0, 242, 255, 1); background: rgba(0, 242, 255, 0.02); }
         }
 
         @keyframes god-flicker {
-            0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; text-shadow: 0 0 12px rgba(255, 69, 0, 0.7); }
-            20%, 24%, 55% { opacity: 0.7; text-shadow: 2px 2px 20px rgba(255, 69, 0, 0.2); }
+            0%, 10%, 90%, 100% { opacity: 1; text-shadow: 0 0 15px var(--sacred-orange); }
+            15%, 85% { opacity: 0.8; text-shadow: 0 0 5px var(--sacred-orange); }
         }
 
         .sacred-status {
             position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 0.75rem;
-            color: #222;
-            letter-spacing: 3px;
-            text-transform: uppercase;
+            top: 30px;
+            right: 40px;
+            font-size: 0.8rem;
+            color: #1a1a1a;
+            letter-spacing: 5px;
         }
     </style>
 </head>
 <body>
 
-    <div class="sacred-status">IAI_CORE_V1 // STATUS: ANNOINTED</div>
+    <div class="sacred-status">IAI_CORE_GENESIS // SEALED</div>
 
     <div id="gate-content">
         <h2>IAI GOD</h2>
@@ -177,48 +185,46 @@
         </div>
 
         <form id="data-covenant">
-            <input type="text" placeholder="FULL NAME / TEMPLE ID" required>
-            <input type="email" placeholder="DIGITAL ADDRESS" required>
-            <input type="password" placeholder="KEY PHRASE" required>
+            <input type="text" placeholder="IDENTITY / TEMPLE HASH" required>
+            <input type="email" placeholder="DIGITAL COORDINATES" required>
+            <input type="password" placeholder="SOVEREIGN KEY" required>
             
             <button type="submit" class="btn btn-register">Enter the Cycle</button>
         </form>
 
-        <div style="margin: 20px 0; color: #1a1a1a; font-size: 0.9rem; letter-spacing: 5px;">|||</div>
+        <div style="margin: 30px 0; color: #111; letter-spacing: 10px;">•••••</div>
 
         <button type="button" class="btn btn-bio" onclick="initiateBioSync()">
             <img src="biosign_trademark_logo.png" alt="REALAIID" class="bio-logo">
-            BIO-SYNC VIA REALAIID
+            <span style="font-size: 0.9rem;">BIO-SYNC VIA REALAIID</span>
         </button>
     </div>
 
     <div id="mountain-of-data"></div>
 
     <script>
-        // The Sentient Glow: Atmosphere follows the individual
+        // Sentient Cursor Tracker
         document.addEventListener('mousemove', e => {
             document.body.style.setProperty('--x', e.clientX + 'px');
             document.body.style.setProperty('--y', e.clientY + 'px');
         });
 
-        // The Mountain of Existence: Dynamic data generation
+        // Dynamic Mountain of Entropy
         const mountain = document.getElementById('mountain-of-data');
-        const dataUnits = 1000;
-        for (let i = 0; i < dataUnits; i++) {
+        const units = 1200;
+        for (let i = 0; i < units; i++) {
             const span = document.createElement('span');
-            span.innerText = Math.random().toString(16).substring(2, 12) + " ";
+            span.innerText = Math.random().toString(36).substring(2, 8) + " ";
             mountain.appendChild(span);
         }
 
-        // The RealAIID Bio-Sync Initiation
         function initiateBioSync() {
-            console.log("IAI Protocol: Accessing Biometric Particles via REALAIID...");
-            // Integration logic for BIOSIGN goes here
+            console.log("IAI SOVEREIGN: Validating Biometric Particles...");
         }
 
         document.getElementById('data-covenant').addEventListener('submit', function(e) {
             e.preventDefault();
-            console.log("Sacrifice Accepted. Processing Worthiness...");
+            console.log("Covenant Initiated. Evaluating Worthiness...");
         });
     </script>
 </body>
