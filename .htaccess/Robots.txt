@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /Testaments/
+Disallow: /The-Ledger/
+# Access by Assignment Only.
